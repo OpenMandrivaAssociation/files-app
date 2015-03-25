@@ -17,6 +17,7 @@ BuildRequires:	pkgconfig(Qt5Qml)
 BuildRequires:	cmake(KF5Declarative)
 BuildRequires:	qml-material
 BuildRequires:	pkgconfig(taglib)
+BuildRequires:	intltool
 
 %description
 The file manager for Papyros
