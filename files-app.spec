@@ -1,5 +1,5 @@
 %define debug_package %nil
-%define snap	20150408
+%define snap	20150709
 
 Summary:	File manager
 Name:		files-app
