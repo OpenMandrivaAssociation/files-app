@@ -15,11 +15,11 @@ BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:	pkgconfig(Qt5Quick)
 BuildRequires:	pkgconfig(Qt5Qml)
 BuildRequires:	pkgconfig(Qt5Widgets)
+BuildRequires:	pkgconfig(taglib)
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5Declarative)
 BuildRequires:	cmake(KF5I18n)
 BuildRequires:	qml-material
-BuildRequires:	pkgconfig(taglib)
 BuildRequires:	intltool
 
 %description
@@ -27,10 +27,10 @@ The file manager for Papyros
 
 %prep
 %setup -q
+%cmake_kde5
 
 %build
-%cmake_kde5
-%make
+%ninja -C build
 
 %install
 %makeinstall_std -C build
