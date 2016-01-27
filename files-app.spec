@@ -15,6 +15,7 @@ BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:	pkgconfig(Qt5Quick)
 BuildRequires:	pkgconfig(Qt5Qml)
 BuildRequires:	pkgconfig(Qt5Widgets)
+BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5Declarative)
 BuildRequires:	cmake(KF5I18n)
 BuildRequires:	qml-material
