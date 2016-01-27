@@ -29,7 +29,7 @@ The file manager for Papyros
 %setup -q
 
 %build
-%cmake_qt5
+%cmake_kde5
 %make
 
 %install
