@@ -1,20 +1,22 @@
 %define debug_package %nil
-%define snap	20150709
+%define snap %nil
 
 Summary:	File manager
 Name:		files-app
-Version:	0.0.0
-Release:	1.%{snap}.1
+Version:	0.0.5
+Release:	1
 License:	GPLv2
 Group:		Graphical desktop/Other
-URL:		https://github.com/quantum-os/files-app
+URL:		https://github.com/papyros/files-app
 # git clone https://github.com/papyros/files-app.git
-# git archive --format=tar --prefix files-app-0.0.0-$(date +%Y%m%d)/ HEAD | xz -vf > files-app-0.0.0-$(date +%Y%m%d).tar.xz
-Source0:	%{name}-%{version}-%{snap}.tar.xz
-BuildRequires:	qt5-devel
-BuildRequires:	pkgconfig(Qt5QuickTest)
+# git archive --format=tar --prefix files-app-0.0.5-$(date +%Y%m%d)/ HEAD | xz -vf > files-app-0.0.5-$(date +%Y%m%d).tar.xz
+Source0:	%{name}-%{version}.tar.gz
+BuildRequires:	pkgconfig(Qt5Core)
+BuildRequires:	pkgconfig(Qt5Quick)
 BuildRequires:	pkgconfig(Qt5Qml)
+BuildRequires:	pkgconfig(Qt5Widgets)
 BuildRequires:	cmake(KF5Declarative)
+BuildRequires:	cmake(KF5I18n)
 BuildRequires:	qml-material
 BuildRequires:	pkgconfig(taglib)
 BuildRequires:	intltool
@@ -23,7 +25,7 @@ BuildRequires:	intltool
 The file manager for Papyros
 
 %prep
-%setup -qn %{name}-%{version}-%{snap}
+%setup -q
 
 %build
 %cmake_qt5
